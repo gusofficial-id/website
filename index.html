@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUS OFFICIAL — Elevated Distinction</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0A0B0E',
+                        charcoal: '#12141A',
+                        'charcoal-card': 'rgba(22, 25, 35, 0.65)',
+                        'gold-accent': '#D4AF37',
+                        'champagne': '#F3E5AB',
+                        'cyan-neon': '#00F0FF',
+                    },
+                    fontFamily: {
+                        heading: ['Cinzel', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 4s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%': { opacity: 0.3, transform: 'scale(1)' },
+                            '100%': { opacity: 0.6, transform: 'scale(1.08)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Glassmorphism Effect */
+        .glass-card {
+            background: rgba(18, 20, 26, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.25), 0 0 20px 0 rgba(0, 240, 255, 0.1);
+        }
+        
+        /* Subtle Background Grid */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Golden Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF6D6 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Metallic Border Glow */
+        .glow-avatar {
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3), inset 0 0 15px rgba(0, 240, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-gray-200 font-body antialiased selection:bg-gold-accent selection:text-obsidian relative overflow-x-hidden min-h-screen">
+
+    <!-- Ambient Glowing Light Orbs -->
+    <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-gold-accent/10 rounded-full blur-[140px] pointer-events-none animate-pulse-glow z-0"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-neon/10 rounded-full blur-[150px] pointer-events-none animate-pulse-glow z-0"></div>
+
+    <!-- Main Container Grid overlay -->
+    <div class="absolute inset-0 bg-grid pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col min-h-screen justify-between">
+        
+        <!-- Header Brand Badge -->
+        <header class="flex justify-center mb-12">
+            <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-card border border-gold-accent/20">
+                <span class="w-2 h-2 rounded-full bg-cyan-neon animate-ping"></span>
+                <span class="font-heading tracking-[0.25em] text-xs uppercase text-champagne/90 font-semibold">Official Realm</span>
+            </div>
+        </header>
+
+        <!-- 1. HERO SECTION -->
+        <section class="flex flex-col items-center text-center my-auto pt-4 pb-16">
+            
+            <!-- Profile Avatar with Glow & Floating Animation -->
+            <div class="relative mb-8 group animate-float">
+                <div class="absolute -inset-1 bg-gradient-to-r from-gold-accent via-cyan-neon to-gold-accent rounded-full blur-md opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                <div class="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden p-1 bg-obsidian glow-avatar">
+                    <div class="w-full h-full rounded-full bg-charcoal flex items-center justify-center border border-gold-accent/30 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-obsidian via-transparent to-gold-accent/20"></div>
+                        <i class="fa-solid font-heading text-5xl md:text-6xl text-gold-accent font-bold tracking-tighter">GUS</i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-heading text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 max-w-4xl leading-tight">
+                Di Balik Layar <span class="gold-gradient-text">Inovasi, Seni, &amp; Visi</span> Tanpa Batas.
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 font-light">
+                Selamat datang di hub resmi <span class="text-gray-200 font-medium">Gus Official</span>. Tempat di mana ide-ide segar, insight eksklusif, portofolio pilihan, dan peluang tak terbatas dikurasikan khusus untuk Anda.
+            </p>
+
+            <!-- Divider Line -->
+            <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-accent/50 to-transparent mb-12"></div>
+        </section>
+
+        <!-- 2. SOCIAL MEDIA & PORTAL SECTION -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-2xl md:text-3xl font-bold text-white tracking-wide">
+                    Pilih Pintu <span class="gold-gradient-text">Eksplorasi Anda</span>
+                </h2>
+                <p class="text-sm text-gray-400 mt-2">Temukan konten, komunitas, dan peluang terbaik melalui kanal resmi di bawah ini.</p>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- a. Instagram Card -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-500 opacity-80"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center text-white text-2xl shadow-lg shadow-pink-500/20">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest text-gold-accent font-semibold px-2.5 py-1 rounded-full bg-gold-accent/10 border border-gold-accent/20">Visual Hub</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white group-hover:text-gold-accent transition-colors mb-2">Instagram Official</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Dapatkan akses visual eksklusif, insight harian, dan behind-the-scenes yang tidak dipublikasikan di tempat lain.
+                        </p>
+                    </div>
+                    <a href="https://www.instagram.com/gusofficial.id/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white/5 hover:bg-gold-accent hover:text-obsidian text-gold-accent font-semibold text-sm transition-all duration-300 border border-gold-accent/30 group-hover:border-gold-accent">
+                        <span>Jelajahi Dunia Visual</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- b. TikTok Card -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-neon to-pink-500 opacity-80"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-obsidian border border-gray-700 flex items-center justify-center text-white text-2xl shadow-lg">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest text-cyan-neon font-semibold px-2.5 py-1 rounded-full bg-cyan-neon/10 border border-cyan-neon/20">Short Trends</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white group-hover:text-cyan-neon transition-colors mb-2">TikTok Channel</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Konten singkat bernilai tinggi, tren terbaru, dan ide-ide segar yang siap menginspirasi harimu.
+                        </p>
+                    </div>
+                    <a href="https://www.tiktok.com/@gusofficiall.id?lang=id-ID" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white/5 hover:bg-cyan-neon hover:text-obsidian text-cyan-neon font-semibold text-sm transition-all duration-300 border border-cyan-neon/30 group-hover:border-cyan-neon">
+                        <span>Tonton Konten Tutorialnya</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- c. Facebook Card -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 opacity-80"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-blue-500/20">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest text-blue-400 font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">Community</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-2">Facebook Page</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Bergabunglah dengan komunitas dan ikuti diskusi mendalam seputar inovasi dan ide.
+                        </p>
+                    </div>
+                    <a href="https://www.facebook.com/profile.php?id=61594821675772" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white/5 hover:bg-blue-500 hover:text-white text-blue-400 font-semibold text-sm transition-all duration-300 border border-blue-500/30 group-hover:border-blue-500">
+                        <span>Masuk Komunitas &amp; Belajar</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- d. Lynk.id Card (Featured High Priority) -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden md:col-span-2 lg:col-span-2 border-gold-accent/40 bg-gradient-to-b from-charcoal-card to-obsidian">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-accent via-champagne to-gold-accent opacity-100"></div>
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-gold-accent/10 rounded-full blur-2xl group-hover:bg-gold-accent/20 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-accent to-amber-700 flex items-center justify-center text-obsidian text-2xl font-bold shadow-lg shadow-gold-accent/20">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest text-gold-accent font-bold px-3 py-1 rounded-full bg-gold-accent/20 border border-gold-accent/40 animate-pulse">Main Gate &amp; Business</span>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white group-hover:text-gold-accent transition-colors mb-2">Lynk.id Store &amp; Digital Hub</h3>
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6 max-w-xl">
+                            Pintu utama ke semua layanan, portofolio eksklusif, dan penawaran produk digital spesial dari Gus Official.
+                        </p>
+                    </div>
+                    <a href="https://lynk.id/gusofficial" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-6 py-3.5 rounded-xl bg-gradient-to-r from-gold-accent to-amber-500 hover:from-champagne hover:to-gold-accent text-obsidian font-bold text-sm transition-all duration-300 shadow-lg shadow-gold-accent/20">
+                        <span>Akses Produk (100% Hak Jual)</span>
+                        <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- e. Blogger Card -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 to-orange-500 opacity-80"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-orange-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-orange-500/20">
+                                <i class="fa-bold fa-blogger-b"></i>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest text-orange-400 font-semibold px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20">Articles &amp; Insights</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-2">Gus Official Blog</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Gudang pemikiran mendalam, artikel gratis yang eksklusif, dan panduan lengkap yang belum pernah Anda baca sebelumnya.
+                        </p>
+                    </div>
+                    <a href="https://gusofficialart.blogspot.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white/5 hover:bg-orange-500 hover:text-white text-orange-400 font-semibold text-sm transition-all duration-300 border border-orange-500/30 group-hover:border-orange-500">
+                        <span>Baca Karya &amp; Artikel Lainnya</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. FOOTER -->
+        <footer class="pt-10 border-t border-gray-800/80 text-center flex flex-col items-center gap-6">
+            
+            <!-- Closing Quote -->
+            <div class="max-w-xl text-center">
+                <blockquote class="italic text-gray-400 text-sm sm:text-base font-light leading-relaxed">
+                    &ldquo;Kualitas terbaik lahir dari komitmen tanpa kompromi terhadap keunggulan dan integritas karya.&rdquo;
+                </blockquote>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-xs tracking-wider text-gray-500 uppercase font-medium">
+                &copy; 2026 <span class="text-gold-accent font-semibold">GUS OFFICIAL</span>. All Rights Reserved. Crafted for Distinction.
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
